@@ -14,6 +14,8 @@ mongooose.connect('mongodb+srv://nakqeeb:' + process.env.MONGO_ATLAS_PW + '@clus
 })
 .catch((err) => console.log('Connection is faild'));;
 
+// app.use(express.json()); // if you want to use this, no need to install bodyParser package
+// OR
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/images", express.static(path.join("backend/images"))); // This will make sure that requests going to '/images' are actually forwarded to the folder 'backend/images'. lecture 83
